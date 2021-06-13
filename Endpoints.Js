@@ -26,8 +26,8 @@ app.get('/centers', function (req, res) {
 })
     .then(res => res.json())
     .then(json => {
-        console.log("First user in the array:");
-        console.log(json.centers);
+       // console.log("First user in the array:");
+        //console.log(json.centers);
         res.end( JSON.stringify(json.centers));
         
 })
@@ -60,8 +60,8 @@ app.get('/centers', function (req, res) {
     })
         .then(res => res.json())
         .then(json => {
-            console.log("First user in the array:");
-            console.log(json.centers);
+            //console.log("First user in the array:");
+            //console.log(json.centers);
             res.end( JSON.stringify(json.centers));
             
     })
