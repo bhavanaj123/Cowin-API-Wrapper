@@ -1,7 +1,18 @@
-var express = require('express')
-,bodyParser = require('body-parser');
-var app = express();
-app.use(bodyParser.json());
+const express = require("express");
+const cors = require("cors");
+const app = express();
+global.__basedir = __dirname;
+
+var corsConfig = {
+  origin: "http://localhost:8888"
+};
+app.use(cors(corsConfig));
+
+app.use(express.text());
+app.use( express.json() );   
+app.use(express.urlencoded({ 
+  extended: true 
+}));
 
 const fetch = require('node-fetch');
 myObj = new Object()
