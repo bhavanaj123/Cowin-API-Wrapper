@@ -75,7 +75,7 @@ app.get('/daily', function (req, res) {
               .then(json => {
                   //console.log("First user in the array:");
                   console.log(json);
-                  res.end( JSON.stringify(json.sessions));
+                  res.end( JSON.stringify(json));
                   
           })
                       
