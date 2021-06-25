@@ -211,8 +211,18 @@ app.get('/bypin', function (req, res) {
                       
               })
 const port = process.env.PORT || 8081;
-var server = app.listen(port, function () {
-   var host = server.address().address
-   var port = server.address().port
-   console.log("Example app listening at http://%s:%s", host, port)
+app.listen(port,  ()=> {
+  
+   console.log("Example app listening at 8081")
 })
+app.use((req, res, next) => {
+  setImmediate(() => {
+    next(new Error('Error occured'));
+  });
+});
+
+app.use(function (err, req, res, next) {
+  console.error(err.message);
+  if (!err.statusCode) err.statusCode = 500;
+  res.status(err.statusCode).send(err.message);
+});
