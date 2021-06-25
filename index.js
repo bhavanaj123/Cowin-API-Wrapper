@@ -52,7 +52,7 @@ app.get('/bypin', function (req, res) {
               let pin = req.query.pin;
           let date = req.query.date;
          // console.log('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+pin+'&date='+date);
-              fetch('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+pin+'&date='+date,{
+              fetch('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+date,{
               
             method: 'GET',
             headers: {
