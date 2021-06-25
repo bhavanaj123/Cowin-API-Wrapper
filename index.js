@@ -48,11 +48,10 @@ app.get('/sevenbypin', function (req, res) {
                     
                     
             })
-app.get('/bypin', function (req, res) {
-              let pin = req.query.pin;
-          let date = req.query.date;
+app.get('/daily', function (req, res) {
+              let date = req.query.date;
          // console.log('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+pin+'&date='+date);
-              fetch('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+date,{
+              fetch('https://covid19.mathdro.id/api/daily/'+date,{
               
             method: 'GET',
             headers: {
