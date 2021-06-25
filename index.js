@@ -7,13 +7,8 @@ const fetch = require('node-fetch');
 myObj = new Object()
 
  app.get('/states', function (req, res) {
-         // let pin = req.query.pin;
-    
-     // console.log('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode='+pin+'&date='+date);
-          fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states',{
-          
-        method: 'GET',
-      })
+  
+  fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states')
           .then(res => res.json())
           .then(json => {
               //console.log("First user in the array:");
