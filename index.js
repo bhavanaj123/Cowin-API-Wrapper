@@ -112,7 +112,7 @@ app.get('/bydist', function (req, res) {
                 .then(res => res.json())
                 .then(json => {
                     //console.log("First user in the array:");
-                    console.log(json.sessions[0].address);
+                   // console.log(json.sessions[0].address);
                     res.send(JSON.stringify(json.sessions));
                     
             })
