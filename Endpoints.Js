@@ -1,6 +1,5 @@
 var express = require('express')
-,bodyParser = require('body-parser');;
-const axios = require('axios').default;
+,bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json());
 
