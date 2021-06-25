@@ -1,1 +1,1 @@
-web: node Endpoints.js
+web: nodemon index.js
