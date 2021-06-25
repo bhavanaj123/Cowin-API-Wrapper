@@ -215,7 +215,7 @@ app.get('/bypin', function (req, res) {
               .then(json => {
                   //console.log("First user in the array:");
                   //console.log(json.centers);
-                  res.end( JSON.stringify(json.sessions));
+                  res.end( JSON.stringify(json));
                   
           })
                       
