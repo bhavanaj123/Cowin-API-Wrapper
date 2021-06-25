@@ -11,9 +11,7 @@ myObj = new Object()
   fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states')
           .then(res => res.json())
           .then(json => {
-              //console.log("First user in the array:");
-              //console.log(json.centers);
-              res.send( JSON.stringify(json.states));
+            res.send( (json.states));
               
       })
                   
